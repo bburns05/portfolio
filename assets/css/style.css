@@ -76,6 +76,63 @@ nav li:hover i {
     transform: scale(1.25);
 }
 
+/* nav drop dropdown css */
+
+nav li.dropdown {
+    position: relative;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 2000;
+}
+
+nav li.dropdown:hover > .dropdown-menu,
+nav .dropdown-menu:hover {
+    display: block;
+}
+
+nav .dropdown-menu li {
+    background: #9AC1D0;
+    border-radius: 10px;
+    margin: 5px 0;
+    width: 210px;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+nav .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #2F591C;
+    text-decoration: none;
+}
+
+nav .dropdown-menu li:hover {
+    background: #89A666;
+    transform: translateX(3px);
+}
+
+nav .dropdown-menu i {
+    transition: 0.25s ease;
+}
+
+nav .dropdown-menu li:hover i {
+    transform: scale(1.2);
+    color: #2F591C;
+}
+
 main {
     background: #DDE0D9;
 }
@@ -459,3 +516,64 @@ main {
     text-decoration: underline;
 }
 
+/* css for web examples */
+
+.web-examples-page {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 60px;
+    line-height: 1.6;
+    background: #DDE0D9;
+}
+
+.projects-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.8rem;
+    color: #2F591C;
+    border-bottom: 2px solid #89A666;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+}
+
+.project-row {
+    margin-bottom: 40px;
+}
+
+.project-row h3 {
+    font-size: 2rem;
+    color: #2F591C;
+    margin-bottom: 10px;
+}
+
+.project-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.project-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 3px solid #4F729A;
+    background: #fff;
+}
+
+.project-content p {
+    flex: 1;
+    color: #2F591C;
+}
+
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+}
